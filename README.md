@@ -2,19 +2,18 @@
 
 <img src="https://raw.githubusercontent.com/Devopstrio/.github/main/assets/Browser_logo.png" height="150" alt="Legacy AD Modernisation Logo" />
 
-<h1>Legacy Active Directory Modernisation Platform</h1>
+<h1>Legacy AD Modernisation</h1>
 
-<p><strong>The Institutional-Grade Platform for AD Transformation, Hybrid Identity Orchestration, and Zero Trust Identity Modernisation</strong></p>
+<p><strong>The Institutional-Grade Platform for AD Transformation, Hybrid Identity Orchestration, and Zero-Trust Identity Modernisation.</strong></p>
 
-[![Standard: Zero--Trust--Identity](https://img.shields.io/badge/Standard-Zero--Trust--Identity-blue.svg?style=for-the-badge&labelColor=000000)]()
-[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-indigo.svg?style=for-the-badge&labelColor=000000)]()
-[![Migration: Cloud--Sync](https://img.shields.io/badge/Migration-Cloud--Sync-blue.svg?style=for-the-badge&labelColor=000000)]()
-[![Security: Protocol--Hardening](https://img.shields.io/badge/Security-Protocol--Hardening-gold.svg?style=for-the-badge&labelColor=000000)]()
+[![Standard: Identity-Excellence](https://img.shields.io/badge/Standard-Identity--Excellence-blue.svg?style=for-the-badge&labelColor=000000)]()
+[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-emerald.svg?style=for-the-badge&labelColor=000000)]()
+[![Focus: Hybrid--Resilience](https://img.shields.io/badge/Focus-Hybrid--Resilience-gold.svg?style=for-the-badge&labelColor=000000)]()
 
 <br/>
 
 > **"Legacy identity is the anchor of institutional risk."** 
-> Legacy AD Modernisation is a flagship solution for modern Identity Architects and CISO organizations. By orchestrating forest-wide discovery, legacy protocol analysis, and automated hybrid migration workflows, it enables enterprises to transform fragile on-premises AD environments into resilient, Zero-Trust-ready identity architectures.
+> **Legacy AD Modernisation** is an enterprise-grade platform designed to provide a secure, measurable, and highly automated foundation for global identity operations. It orchestrates the complex lifecycle of Active Directory modernization—from forest-wide health assessments and legacy protocol hardening to hybrid Entra ID synchronization and unified identity governance.
 
 </div>
 
@@ -22,613 +21,261 @@
 
 ## 🏛️ Executive Summary
 
-The **Legacy AD Modernisation Platform** is a specialized flagship solution designed for IAM Leaders, Security Architects, and Enterprise IT Leaders. As Active Directory enters its third decade, legacy environments have become the primary attack vector for sophisticated threats. This platform addresses the complexity of modernizing decades-old identity infrastructure—users, groups, service accounts, and GPOs—using a data-driven, automated approach.
+Fragile Active Directory forests and manual identity management processes are strategic operational liabilities; lack of centralized identity orchestration is a primary barrier to organizational zero-trust adoption. Organizations fail to achieve rapid identity modernization not because of a lack of tools, but because of fragmented identity standards, lack of automated forest consolidation, and an inability to orchestrate cloud synchronization with operational precision.
 
-This platform provides a **Unified Identity Transformation Plane**. It demonstrates how to orchestrate institutional identity—using **FastAPI**, **React 18**, and **Hybrid Identity Patterns**—to create a "Cloud-Ready" identity posture. By providing **Forest-Level Discovery**, **Protocol Risk Mapping**, and **Automated Migration Runbooks**, it enables organizations to move from "Identity Debt" to "Identity Agility."
-
----
-
-## 📉 The "Identity Debt" Problem
-
-Enterprises scaling legacy Active Directory face existential challenges:
-- **Legacy Protocol Exposure**: Widespread reliance on insecure protocols like NTLMv1 and Kerberos-RC4 that are vulnerable to relay and brute-force attacks.
-- **Shadowed Privileges**: Decades of nested group memberships leading to "Privilege Creep" where unauthorized users possess domain-level permissions.
-- **LDAP Dependencies**: Fragile application dependencies on hard-coded LDAP paths, preventing domain consolidation or decommissioning.
-- **Operational Complexity**: Maintaining disparate forest/domain trusts that increase the attack surface and complicate MFA/SSO rollouts.
+This platform provides the **Identity Intelligence Plane**. It implements a complete **Enterprise Identity-as-Code Framework**, enabling IAM and Security teams to manage global AD modernization efforts as first-class citizens. By automating the identification of legacy protocol risks and orchestrating real-time domain controller upgrades, we ensure that every organizational identity—from privileged domain admins to routine service accounts—is assessed by default, audited for history, and strictly aligned with institutional identity frameworks.
 
 ---
 
-## 🚀 Strategic Drivers & Business Outcomes
+## 📐 Architecture Storytelling: Principal Reference Models
 
-### 🎯 Strategic Drivers
-- **Zero Trust Readiness**: Eliminating standing privileges and transitioning to "Verify Explicitly" models via Entra ID and Conditional Access.
-- **Protocol Hardening**: Automating the detection and reduction of legacy protocols in favor of modern, encrypted alternatives.
-- **Domain Consolidation**: Streamlining forest topologies to reduce operational overhead and improve the security boundary.
+### 1. Principal Architecture: Global Legacy AD Modernization & Identity Intelligence Plane
+This diagram illustrates the end-to-end flow from multi-forest discovery and health assessment to Entra ID synchronization, legacy DC decommissioning, and institutional identity auditing.
 
-### 💰 Business Outcomes
-- **80% Reduction in Identity Attack Surface**: Eliminating legacy risk factors and hardening the AD security posture.
-- **Accelerated Cloud Migration**: Speeding up the transition to Entra ID and cloud-native identity providers.
-- **Institutional Compliance**: Providing continuous auditing and evidence of identity governance across hybrid environments.
+```mermaid
+graph LR
+    %% Subgraph Definitions
+    subgraph IdentityIngress["Multi-Forest Discovery Ingress"]
+        direction TB
+        OnPrem_AD["On-Prem AD Forests"]
+        LegacyProtocols["NTLM / LDAP Analysis"]
+        TrustMap["Trust Relationship Scan"]
+    end
+
+    subgraph IntelligenceEngine["Identity Intelligence Hub"]
+        direction TB
+        API["FastAPI Identity Gateway"]
+        HardeningEngine["Protocol Hardening Engine"]
+        SyncOrch["Entra ID / Cloud Sync Orch"]
+        GovernanceLogic["Identity Governance Logic"]
+    end
+
+    subgraph TransformationPlane["Distributed Identity Fleet"]
+        direction TB
+        DC_Upgraders["DC Upgrade Workers"]
+        PolicyCleanup["GPO & Group Cleanup"]
+        SyncAgents["Cloud Sync Agent Fleet"]
+    end
+
+    subgraph OperationsHub["Institutional Identity Hub"]
+        direction TB
+        Scorecard["AD Maturity Score"]
+        Analytics["Sync & Security Stats"]
+        Audit["Forensic Identity Metadata Lake"]
+    end
+
+    subgraph DevOps["Identity-as-Code Orchestration"]
+        direction TB
+        TF["Terraform Identity Modules"]
+        LifecycleBot["User Lifecycle Automator"]
+        ChatOps["Change Approval Hub"]
+    end
+
+    %% Flow Arrows
+    IdentityIngress -->|1. Submit Identity Data| API
+    API -->|2. Harden Protocols| HardeningEngine
+    HardeningEngine -->|3. Synchronize Cloud| SyncOrch
+    SyncOrch -->|4. Enforce Governance| GovernanceLogic
+    
+    GovernanceLogic -->|5. Execute Upgrades| TransformationPlane
+    TransformationPlane -->|6. Notify Change| ChatOps
+    API -->|7. Visualize Health| Scorecard
+    
+    Scorecard -->|8. Track Security| Analytics
+    Scorecard -->|9. Record Change| Audit
+    
+    TF -->|10. Provision Hub| IntelligenceEngine
+    LifecycleBot -->|11. Inject Lifecycle Policy| GovernanceLogic
+    Audit -->|12. Improve Hardening| HardeningEngine
+
+    %% Styling
+    classDef ingress fill:#f5f5f5,stroke:#616161,stroke-width:2px;
+    classDef intel fill:#e3f2fd,stroke:#1565c0,stroke-width:2px;
+    classDef transformation fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef ops fill:#ede7f6,stroke:#311b92,stroke-width:2px;
+    classDef devops fill:#fffde7,stroke:#f57f17,stroke-width:2px;
+
+    class IdentityIngress ingress;
+    class IntelligenceEngine intel;
+    class TransformationPlane transformation;
+    class OperationsHub ops;
+    class DevOps devops;
+```
+
+### 2. The AD Modernization Lifecycle Flow
+The continuous path of an AD forest from initial health assessment and forest consolidation to active cloud synchronization, workload migration, and institutional forensic auditing.
+
+```mermaid
+graph LR
+    Assess["Assess Health"] --> Consolidate["Consolidate Forests"]
+    Consolidate --> Synchronize["Synchronize Cloud"]
+    Synchronize --> Migrate["Migrate Workloads"]
+    Migrate --> Audit["Forensic Audit"]
+```
+
+### 3. Hybrid Identity Topology
+Connecting disparate on-premises AD forests strategically to Entra ID (Azure AD) via Connect or Cloud Sync agents, providing a unified institutional entry point for all organizational identities.
+
+```mermaid
+graph LR
+    ForestA["Forest A: North America"] -->|Sync Agent| Entra["Microsoft Entra ID (Azure AD)"]
+    ForestB["Forest B: EMEA"] -->|Sync Agent| Entra
+    Entra --- Logic["Conditional Access Engine"]
+```
+
+### 4. Legacy Forest Consolidation & Trust Flow
+Merging disparate and aging forests into a streamlined, high-security enterprise model, reducing the institutional attack surface and simplifying the trust topology.
+
+```mermaid
+graph TD
+    DomainA["Legacy Domain A"] -->|Trust| Hub["Modern Identity Hub"]
+    DomainB["Legacy Domain B"] -->|Trust| Hub
+    Hub -->|Forest Trust| Entra["Cloud Identity Provider"]
+    Hub --- Action["Decommission Legacy DCs"]
+```
+
+### 5. Distributed Domain Controller Modernization Flow
+Managing the sequential upgrade and decommissioning of legacy Domain Controllers (Windows 2008/2012) safely across global sites, ensuring zero-interruption identity availability.
+
+```mermaid
+graph LR
+    LegacyDC["Tier 1: Legacy 2012 DC"] -->|Healthy| NewDC["Tier 2: Modern 2022 DC"]
+    NewDC -->|Replicated| Promote["Promote & Verify"]
+    Promote --- Monitor["Real-Time Replication Loop"]
+```
+
+### 6. Identity Governance & Lifecycle Management Flow
+Automatically orchestrating user onboarding, offboarding, and group membership updates across hybrid AD environments, eliminating "Identity Debt" and shadowed privileges.
+
+```mermaid
+graph LR
+    Event["HR System Event"] --> Scrubber["Identity Governance Engine"]
+    Scrubber -->|New User| Provision["Provision AD & Cloud"]
+    Scrubber -->|Termination| Disable["Kill AD & Cloud Access"]
+    Disable --- Audit["Governance Compliance Log"]
+```
+
+### 7. Institutional AD Maturity Scorecard
+Grading organizational performance based on key indicators: AD Security Posture, Replication Health, and Cloud Sync Coverage.
+
+```mermaid
+graph TD
+    Post["Identity Health: 94%"] --> Risk["Legacy Gap: 6%"]
+    Post --- C1["Security Posture (96%)"]
+    Post --- C2["Cloud Sync Coverage (100%)"]
+```
+
+### 8. Identity & RBAC for AD Governance
+Managing fine-grained access to identity schedules, modernization triggers, and audit logs between Domain Admins, Cloud Architects, and Identity Officers.
+
+```mermaid
+graph TD
+    Admin["Domain Admin"] --> Hub["Manage On-Prem Forests"]
+    Arch["Cloud Architect"] --> Sync["Execute Cloud Sync"]
+    Officer["Identity Officer"] --> Audit["Verify Governance Compliance"]
+```
+
+### 9. IaC Deployment: AD-Modernization-as-Code Framework
+Using modular Terraform to deploy and manage the versioned distribution of the identity tracking hubs, synchronization workers, and forensic metadata lakes.
+
+```mermaid
+graph LR
+    HCL["Infrastructure Code"] --> TF["Terraform Apply"]
+    TF --> Engine["Identity Control Plane"]
+    Engine --> Clusters["HA Sync Agent Fleet"]
+```
+
+### 10. AIOps Identity Anomaly & Attack Validation Flow
+Using advanced analytics to identify DCSync attacks, Golden Ticket usage, or unusual account behavior that could result in institutional identity compromise.
+
+```mermaid
+graph LR
+    Traffic["Identity Traffic"] --> Analyzer["Anomaly Detection Bot"]
+    Analyzer -->|Attack| Block["Automated Account Isolation"]
+    Analyzer -->|Normal| Pass["Status Optimal"]
+```
+
+### 11. Metadata Lake for Forensic Identity Audit
+Storing long-term records of every GPO change, every group membership update, and every sync event for institutional record-keeping, compliance auditing, and post-incident forensics.
+
+```mermaid
+graph LR
+    Change["Identity Change"] --> Stream["Forensic Stream"]
+    Stream --> Lake["Identity Metadata Lake"]
+    Lake --> Trends["Privilege Creep Trends"]
+```
 
 ---
 
-## 📐 Architecture Storytelling: 80+ Advanced Diagrams
-
-### 1. Executive Modernisation Architecture
-*The orchestration of Discovery, Analysis, and Transformation.*
-```mermaid
-graph TD
-    subgraph "AD Modernisation Platform"
-        Portal[Transformation Hub]
-        Discovery[Discovery Engine]
-        Security[Security Analysis]
-        Migration[Migration Orchestrator]
-        Analytics[Risk Analytics]
-    end
-
-    subgraph "Legacy Infrastructure"
-        DC[Domain Controllers]
-        LDAP[LDAP Applications]
-        GPO[Group Policy Objects]
-    end
-
-    subgraph "Modern Identity"
-        Entra[Microsoft Entra ID]
-        Okta[Okta / Cloud IdP]
-    end
-
-    Portal --> Discovery
-    Discovery --> DC
-    Security --> DC
-    Security --> GPO
-    Migration --> DC
-    Migration --> Entra
-    Analytics --> Portal
-```
-
-### 2. The Identity Discovery Lifecycle
-*From raw AD scan to classified inventory.*
-```mermaid
-sequenceDiagram
-    participant Agent as Discovery Agent
-    participant DC as AD Domain Controller
-    participant Engine as Discovery Engine
-    participant DB as Identity Ledger
-    participant UI as Transformation Hub
-
-    Agent->>DC: LDAP Bind & Topology Query
-    DC-->>Agent: AD Objects & Metadata
-    Agent->>Engine: Push Discovery Data
-    Engine->>Engine: Analyze Protocol Usage (NTLM/Kerberos)
-    Engine->>Engine: Classify Identity Type
-    Engine->>DB: Persist AD Object Record
-    DB-->>UI: Real-time AD Inventory View
-```
-
-### 3. Trust Relationship Mapping
-*Visualizing the forest/domain interconnectivity.*
-```mermaid
-graph TD
-    F1[Forest A: corp.local] -->|Two-Way Trust| F2[Forest B: partner.net]
-    F1 -->|One-Way Trust| D1[Domain: dev.corp.local]
-    F2 -->|External Trust| E1[Domain: legacy.ext]
-```
-
-### 4. Legacy Protocol Reduction Workflow
-```mermaid
-graph LR
-    Detect[Detect NTLMv1 Usage] --> Map[Map to Source App]
-    Map --> Advise[Recommend Kerberos/SAML]
-    Advise --> Migrate[Modernise App Auth]
-    Migrate --> Disable[Disable Legacy Protocol]
-```
-
-### 5. Group Policy (GPO) Modernisation Loop
-```mermaid
-graph TD
-    GPO[Legacy GPOs] --> Analyze[Policy Conflict Analysis]
-    Analyze --> Cleanup[Remove Redundant Policies]
-    Cleanup --> Map[Map to Intune / MDM]
-    Map --> Modern[Cloud-Native Policies]
-```
-
-### 6. Hybrid Identity Sync Architecture
-```mermaid
-graph LR
-    AD[On-Prem AD] --> Sync[Entra ID Connect]
-    Sync --> Entra[Microsoft Entra ID]
-    Entra --> Apps[Cloud-Native Apps]
-```
-
-### 7. Privileged Account "Shadow" Detection
-```mermaid
-graph LR
-    User[User A] --> G1[Group: Tier 1 Admins]
-    G1 --> G2[Group: Domain Admins]
-    G2 --> Power[High Privilege Access]
-    Note right of User: Indirect Privilege Detected
-```
-
-### 8. Service Account Modernisation Flow
-```mermaid
-graph LR
-    SA[Service Account] --> Scan[Analyze Login Pattern]
-    Scan --> gMSA[Migrate to gMSA]
-    gMSA --> Rotation[Automated Password Rotation]
-```
-
-### 9. Conditional Access Rollout Simulation
-```mermaid
-graph LR
-    Policy[Policy: Require MFA] --> Simulation[Impact Analysis]
-    Simulation --> User[Affected User Group]
-    User --> Ready[MFA Readiness Score]
-```
-
-### 10. Identity Risk Scorecard Generation
-```mermaid
-graph LR
-    Metrics[AD Telemetry] --> Engine[Risk Engine]
-    Engine --> Grade[Security Grade: B+]
-```
-
-### 11. Environment discovery flow
-```mermaid
-graph LR
-    E[Environ] --> D[Disc]
-```
-
-### 12. Domain analysis flow
-```mermaid
-graph LR
-    D[Domain] --> A[Analy]
-```
-
-### 13. Identity inventory flow
-```mermaid
-graph LR
-    I[Identity] --> I[Inven]
-```
-
-### 14. Trust mapping flow
-```mermaid
-graph LR
-    T[Trust] --> M[Map]
-```
-
-### 15. Risk identification flow
-```mermaid
-graph LR
-    R[Risk] --> I[Iden]
-```
-
-### 16. Security posture analysis
-```mermaid
-graph LR
-    S[Sec] --> P[Post]
-```
-
-### 17. GPO analysis flow
-```mermaid
-graph LR
-    G[GPO] --> A[Analy]
-```
-
-### 18. GPO cleanup flow
-```mermaid
-graph LR
-    G[GPO] --> C[Clean]
-```
-
-### 19. Lifecycle modernization flow
-```mermaid
-graph LR
-    L[Life] --> M[Modern]
-```
-
-### 20. Hybrid identity architecture
-```mermaid
-graph LR
-    H[Hybrid] --> A[Arch]
-```
-
-### 21. Cloud sync pattern
-```mermaid
-graph LR
-    C[Cloud] --> S[Sync]
-```
-
-### 22. Federation rollout flow
-```mermaid
-graph LR
-    F[Feder] --> R[Roll]
-```
-
-### 23. SSO rollout flow
-```mermaid
-graph LR
-    S[SSO] --> R[Roll]
-```
-
-### 24. Zero trust transformation
-```mermaid
-graph LR
-    Z[Zero] --> T[Trans]
-```
-
-### 25. PAM modernization flow
-```mermaid
-graph LR
-    P[PAM] --> M[Modern]
-```
-
-### 26. Service account modernization
-```mermaid
-graph LR
-    S[Serv] --> M[Modern]
-```
-
-### 27. Application identity migration
-```mermaid
-graph LR
-    A[App] --> M[Migrate]
-```
-
-### 28. Protocol reduction strategy
-```mermaid
-graph LR
-    P[Prot] --> R[Reduc]
-```
-
-### 29. LDAP dependency analysis
-```mermaid
-graph LR
-    L[LDAP] --> D[Dep]
-```
-
-### 30. Conditional access rollout
-```mermaid
-graph LR
-    C[Cond] --> R[Roll]
-```
-
-### 31. MFA enforcement flow
-```mermaid
-graph LR
-    M[MFA] --> E[Enforce]
-```
-
-### 32. Passwordless readiness flow
-```mermaid
-graph LR
-    P[Pass] --> R[Read]
-```
-
-### 33. Domain consolidation flow
-```mermaid
-graph LR
-    D[Domain] --> C[Consol]
-```
-
-### 34. Migration runbook flow
-```mermaid
-graph LR
-    M[Migrate] --> R[Run]
-```
-
-### 35. Audit reporting flow
-```mermaid
-graph LR
-    A[Audit] --> R[Report]
-```
-
-### 36. Discovery engine pipeline
-```mermaid
-graph LR
-    D[Disc] --> E[Engine]
-```
-
-### 37. Security engine flow
-```mermaid
-graph LR
-    S[Sec] --> E[Engine]
-```
-
-### 38. Migration engine flow
-```mermaid
-graph LR
-    M[Mig] --> E[Engine]
-```
-
-### 39. Analytics engine flow
-```mermaid
-graph LR
-    A[Analy] --> E[Engine]
-```
-
-### 40. Active Directory sync
-```mermaid
-graph LR
-    A[AD] --> S[Sync]
-```
-
-### 41. Entra ID integration
-```mermaid
-graph LR
-    E[Entra] --> I[Integ]
-```
-
-### 42. Okta integration flow
-```mermaid
-graph LR
-    O[Okta] --> I[Integ]
-```
-
-### 43. Kerberos reduction flow
-```mermaid
-graph LR
-    K[Kerb] --> R[Reduc]
-```
-
-### 44. NTLM reduction flow
-```mermaid
-graph LR
-    N[NTLM] --> R[Reduc]
-```
-
-### 45. GPO modernization flow
-```mermaid
-graph LR
-    G[GPO] --> M[Modern]
-```
-
-### 46. Identity cleanup flow
-```mermaid
-graph LR
-    I[Iden] --> C[Clean]
-```
-
-### 47. Infrastructure: Network
-```mermaid
-graph LR
-    I[Infra] --> N[Net]
-```
-
-### 48. Infrastructure: Identity
-```mermaid
-graph LR
-    I[Infra] --> I[Iden]
-```
-
-### 49. Monitoring: Prometheus
-```mermaid
-graph LR
-    M[Mon] --> P[Prom]
-```
-
-### 50. Monitoring: Grafana
-```mermaid
-graph LR
-    M[Mon] --> G[Graf]
-```
-
-### 51. Monitoring: Alerts
-```mermaid
-graph LR
-    M[Mon] --> A[Alert]
-```
-
-### 52. CI/CD: Build pipeline
-```mermaid
-graph LR
-    C[CICD] --> B[Build]
-```
-
-### 53. CI/CD: Test pipeline
-```mermaid
-graph LR
-    C[CICD] --> T[Test]
-```
-
-### 54. CI/CD: Deploy pipeline
-```mermaid
-graph LR
-    C[CICD] --> D[Deploy]
-```
-
-### 55. AD UI: Dashboard
-```mermaid
-graph LR
-    U[UI] --> D[Dash]
-```
-
-### 56. AD UI: Inventory
-```mermaid
-graph LR
-    U[UI] --> I[Inven]
-```
-
-### 57. AD UI: Trusts
-```mermaid
-graph LR
-    U[UI] --> T[Trusts]
-```
-
-### 58. AD UI: Security
-```mermaid
-graph LR
-    U[UI] --> S[Sec]
-```
-
-### 59. AD UI: Migration
-```mermaid
-graph LR
-    U[UI] --> M[Mig]
-```
-
-### 60. API: Inventory fetch
-```mermaid
-graph LR
-    A[API] --> I[Inven]
-```
-
-### 61. API: Trust fetch
-```mermaid
-graph LR
-    A[API] --> T[Trust]
-```
-
-### 62. API: Security analysis
-```mermaid
-graph LR
-    A[API] --> S[Sec]
-```
-
-### 63. API: Migration plan
-```mermaid
-graph LR
-    A[API] --> M[Plan]
-```
-
-### 64. Worker: Discovery
-```mermaid
-graph LR
-    W[Worker] --> D[Disc]
-```
-
-### 65. Worker: Security
-```mermaid
-graph LR
-    W[Worker] --> S[Sec]
-```
-
-### 66. Worker: Migration
-```mermaid
-graph LR
-    W[Worker] --> M[Mig]
-```
-
-### 67. Worker: Analytics
-```mermaid
-graph LR
-    W[Worker] --> A[Analy]
-```
-
-### 68. Worker: Notify
-```mermaid
-graph LR
-    W[Worker] --> N[Notify]
-```
-
-### 69. Forest modernization topology
-```mermaid
-graph LR
-    F[Forest] --> M[Modern]
-```
-
-### 70. Group cleanup workflow
-```mermaid
-graph LR
-    G[Group] --> C[Clean]
-```
-
-### 71. Privilege shadowing flow
-```mermaid
-graph LR
-    P[Priv] --> S[Shadow]
-```
-
-### 72. Account deprecation flow
-```mermaid
-graph LR
-    A[Account] --> D[Deprec]
-```
-
-### 73. Protocol hardening loop
-```mermaid
-graph LR
-    P[Prot] --> H[Hard]
-```
-
-### 74. State management flow
-```mermaid
-graph LR
-    S[State] --> M[Manage]
-```
-
-### 75. Transformation roadmap
-```mermaid
-graph LR
-    T[Trans] --> R[Road]
-```
-
-### 76. Governance gap analysis
-```mermaid
-graph LR
-    G[Gov] --> G[Gap]
-```
-
-### 77. Evidence collection flow
-```mermaid
-graph LR
-    E[Evidence] --> C[Collect]
-```
-
-### 78. Value realization model
-```mermaid
-graph LR
-    V[Val] --> R[Real]
-```
-
-### 79. Identity debt index
-```mermaid
-graph LR
-    I[Iden] --> D[Debt]
-```
-
-### 80. Modern AD ecosystem
-```mermaid
-graph LR
-    M[Mod] --> E[Eco]
-```
+## 🏛️ Core Identity Pillars
+
+1.  **Unified Identity Coordination**: Maximizing resilience by centralizing all forest identities through a single institutional plane.
+2.  **Automated Health Validation**: Eliminating "fragile forest" scenarios through proactive health and trust verification.
+3.  **Sequential DC Modernization**: Ensuring zero-interruption service through dependency-aware domain controller upgrades.
+4.  **Zero-Trust Identity Protection**: Automatically enforcing conditional access and protocol hardening across hybrid environments.
+5.  **Autonomous Governance Logic**: Guaranteeing identity integrity through automated user lifecycle runbooks.
+6.  **Full Identity Auditability**: Immutable recording of every GPO change and sync event for institutional forensics.
 
 ---
 
 ## 🛠️ Technical Stack & Implementation
 
-### Discovery & Security Engine
-- **Processing**: Python 3.11+ / FastAPI / LDAP3
-- **Automation**: AD Scan scripts (PowerShell-compatible payloads), GPO parser.
-- **Backend**: PostgreSQL (Identity Ledger), Redis (Scan Queue).
+### Identity Engine & APIs
+*   **Framework**: Python 3.11+ / FastAPI.
+*   **Identity Connector**: Integration with LDAP3, Entra ID (Graph API), and PowerShell-based AD modules.
+*   **Orchestrator**: Custom Python-based logic for forest consolidation and DC upgrade sequencing.
+*   **Persistence**: PostgreSQL (Identity Ledger) and Redis (Live Sync State).
+*   **Auth Orchestrator**: Federated OIDC/SAML for least-privilege identity management access.
 
-### Frontend (Transformation Hub)
-- **Framework**: React 18 / Vite
-- **Visuals**: Recharts (Modernisation Index, Risk Scorecards, Identity Trends).
-- **Theme**: Blue, Slate, and Gold (Institutional Identity Aesthetics).
+### Transformation Dashboard (UI)
+*   **Framework**: React 18 / Vite.
+*   **Theme**: Dark, Blue, Slate (Modern high-fidelity identity aesthetic).
+*   **Visualization**: D3.js for forest trust maps and Recharts for identity health analytics.
 
-### Infrastructure
-- **Cloud**: AWS / Azure Hybrid Networking.
-- **IaC**: Terraform (Managed VPN, Entra ID App Registrations).
+### Infrastructure & DevOps
+*   **Runtime**: AWS EKS or Azure Kubernetes Service (AKS) for management plane.
+*   **Sync Hub**: Managed Entra ID Connect or Cloud Sync agents.
+*   **IaC**: Modular Terraform for deploying the identity landing zone and sync distributions.
+
+---
+
+## 🏗️ IaC Mapping (Module Structure)
+
+| Module | Purpose | Real Services |
+| :--- | :--- | :--- |
+| **`infrastructure/id_hub`** | Central management plane | EKS, PostgreSQL, Redis |
+| **`infrastructure/connectors`** | On-Prem & Cloud API adapters | LDAP3, Graph API, VPN |
+| **`infrastructure/workers`** | DC Upgrade & Cleanup fleet | K8s Workers, SSH, WinRM |
+| **`infrastructure/auditing`** | Forensic identity sinks | S3, Athena, Quicksight |
 
 ---
 
 ## 🚀 Deployment Guide
 
-### Local Development
+### Local Principal Environment
 ```bash
-# Clone the repository
+# Clone the identity platform
 git clone https://github.com/devopstrio/legacy-ad-modernisation.git
 cd legacy-ad-modernisation
 
-# Setup environment
+# Configure environment
 cp .env.example .env
 
-# Launch services
-make up
+# Launch the Identity stack
+make init
+
+# Trigger a mock forest discovery and protocol hardening simulation
+make simulate-identity
 ```
+
 Access the Transformation Hub at `http://localhost:3000`.
 
 ---
 
 ## 📜 License
 Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+<div align="center">
+  <p>© 2026 Devopstrio. All rights reserved.</p>
+</div>
